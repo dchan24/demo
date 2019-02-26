@@ -1,0 +1,161 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id = "@+id/select_send_audio_type_root_view"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:layout_height="306dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="13sp"
+            android:gravity="center_vertical"
+            android:textColor="#FF6f6f6f"
+            android:text = "@string/audio_select_type"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFF3F3F3"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:background="#FFFFFFFF"
+            android:gravity="center_vertical"
+            android:id = "@+id/select_send_audio_and_text_root"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:includeFontPadding="false"
+                android:text="@string/audio_select_audio_and_text"
+                android:layout_weight="1"
+                android:textColor="#FF2A2A2A"
+                android:id = "@+id/select_send_audio_and_text"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/select_send_audio_and_text_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:includeFontPadding="false"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/send_audio_type_select_btn_bg" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFF3F3F3"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:background="#FFFFFFFF"
+            android:gravity="center_vertical"
+            android:id = "@+id/select_send_text_root"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/audio_select_text"
+                android:layout_weight="1"
+                android:id = "@+id/select_send_text"
+                android:textColor="#FF2A2A2A"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/select_send_text_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/send_audio_type_select_btn_bg" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFF3F3F3"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="59dp"
+            android:background="#FFFFFFFF"
+            android:gravity="center_vertical"
+            android:id = "@+id/select_send_audio_root"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/audio_select_audio"
+                android:id = "@+id/select_send_voice"
+                android:textColor="#FF2A2A2A"
+                android:layout_weight="1"
+                android:textSize="18sp" />
+            <ImageView
+                android:id="@+id/select_send_voice_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/send_audio_type_select_btn_bg" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="#FFF1F1F1"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFFFF"
+            android:gravity="center_vertical"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/audio_select_cancel"
+                android:gravity="center"
+                android:id = "@+id/select_send_audio_type_cancel"
+                android:background="@drawable/audio_type_select_operation_btn_bg"
+                android:textColor="#FF2A2A2A"
+                android:layout_weight="1"
+                android:textSize="18sp" />
+            <TextView
+                android:id = "@+id/select_send_audio_type_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/audio_type_select_operation_btn_bg"
+                android:clickable="true"
+                android:text = "@string/audio_select_sure"
+                android:textSize="18sp"
+                android:textColor="#FF2A2A2A"
+                android:focusable="true"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>

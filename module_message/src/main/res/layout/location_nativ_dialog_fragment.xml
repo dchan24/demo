@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="bottom"
+    android:layout_height="match_parent">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:textSize="18sp"
+    android:paddingLeft="20dp"
+    android:gravity="center_vertical"
+    android:text = "@string/gd_nativ_name"
+    android:visibility="gone"
+    android:id = "@+id/gd_nativ"
+    android:background="@drawable/nativ_select_bg"
+
+    />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id = "@+id/gd_item_line"
+        android:background="#FFF3F3F3"
+        android:visibility="gone"
+       />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:text = "@string/baidu_nativ_name"
+        android:id = "@+id/baidu_nativ"
+        android:visibility="gone"
+        android:background="@drawable/nativ_select_bg"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id = "@+id/baidu_item_line"
+        android:background="#FFF3F3F3"
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="20dp"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:text = "@string/tencent_nativ_name"
+        android:id = "@+id/tecent_nativ"
+        android:background="@drawable/nativ_select_bg"
+        android:visibility="gone"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id = "@+id/tencent_item_line"
+        android:background="#FFF3F3F3"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

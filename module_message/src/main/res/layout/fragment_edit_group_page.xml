@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <TextView
+        android:id="@+id/tv_expanded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_for_group_you_create"
+        android:layout_marginTop="23dp"
+        android:textSize="@dimen/sp12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/et_group_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:textCursorDrawable="@drawable/contact_editcursor"
+            android:textSize="@dimen/sp24"
+            android:textColor="@color/color_2a2a2a"
+            android:textColorHint="@color/color_d5d5d5"
+            android:hint="@string/creat_group_hint_name" />
+
+        <ImageButton
+            android:id="@+id/ib_del"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:src="@drawable/contact_search_delect_btn_selector"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.33dp"
+        android:background="@color/color_f3f3f3" />
+
+</LinearLayout>

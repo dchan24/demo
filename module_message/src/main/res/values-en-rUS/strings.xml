@@ -1,0 +1,22 @@
+<resources>
+    <string name="location_activity_title">Location</string>
+    <string name="send_location">Send</string>
+    <string name="location_loading">Loading</string>
+    <string name="location_network_invalid_tip">Please check your network and retry.</string>
+    <string name="location_round_tips">You may select the location within 500 meters</string>
+    <string name="gd_nativ_name">A Map</string>
+    <string name="baidu_nativ_name">Baidu Map</string>
+    <string name="tencent_nativ_name">Tecent Map</string>
+    <string name="cancel_nativ">Cancel</string>
+    <string name="phone_no_nativ_software">No navigation app found, fail to operate, please download the navigation system application and retry.</string>
+    <string name="phone_nativ_version_low">Temporarily unable to support the navigation, please upgrade your navigation system application.</string>
+    <string name="touch_start_say">Tap and Speak now</string>
+    <string name="record_setting">Settings</string>
+    <string name="send_record">Send</string>
+    <string name="recording">Voice recording…</string>
+    <string name="smart_recording">Intelligent identify…</string>
+    <string name="record_network_is_error">Network error, please check your network settings</string>
+    <string name="record_count_down">Countdown Timer</string>
+    <string name="record_second">Sec</string>
+
+</resources>

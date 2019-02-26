@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+    <LinearLayout
+        android:id="@+id/left_back"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_back_selector"
+            android:id = "@+id/location_back_btn" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location_activity_title"
+        android:textSize="18sp"
+        android:includeFontPadding="false"
+        android:layout_toRightOf="@+id/left_back"
+        android:textColor="@color/color_2a2a2a"
+        android:id = "@+id/location_title"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:id="@+id/select_rl"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent"
+        android:layout_width="60dp">
+        <TextView
+            android:id="@+id/location_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:includeFontPadding="false"
+            android:textColor="#2A2A2A"
+            android:textSize="16sp"
+            android:text = "@string/send_location"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginLeft="12dp" />
+
+    </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mMapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.cmmap.api.maps.MapView
+            android:id="@+id/bmapsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_map_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/map_z_icon_position"
+            android:text="Center"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_map_title"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_map_position"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/map_info"
+            android:gravity="center"
+            android:maxLines="4"
+            android:paddingRight="8dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/listview_add_public_platform"
+            style="@style/FetionTheme.Activity_ListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:choiceMode="singleChoice"
+            android:listSelector="@drawable/sdk_menu_item_bg_selector"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@anim/common_rotate_loading_anim" />
+        />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/d_empty_only_text_margin_t"
+        android:text="@string/no_files"
+        android:textColor="@color/c_empty_tip_text_color"
+        android:textSize="@dimen/d_empty_tip_text_size"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/lv_choose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:scrollingCache="false"
+        android:scrollbars="none"/>
+
+
+
+</RelativeLayout>

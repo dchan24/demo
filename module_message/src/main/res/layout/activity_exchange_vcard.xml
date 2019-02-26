@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/id_toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/color_f9f9f9"-->
+        <!--android:elevation="@dimen/toolbar_elevation"-->
+        <!--app:navigationIcon="@drawable/title_bar_home_light"-->
+        <!--app:titleTextColor="@color/tv_title_color"-->
+        <!--app:title="@string/exchange_vcard_applay"-->
+        <!--style="@style/NoSpaceActionBarTheme">-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <LinearLayout
+            android:id="@+id/back_LlView"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_back_selector"
+                android:id = "@+id/select_picture_custom_toolbar_back_btn" />
+
+            <TextView
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exchange_vcard_applay"
+                android:textSize="@dimen/sp20"
+                android:includeFontPadding="false"
+                android:layout_toRightOf="@+id/left_back"
+                android:textColor="@color/color_2a2a2a"
+                android:id = "@+id/select_picture_custom_toolbar_title_text"
+                android:layout_centerVertical="true" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:background="@color/color_fffffe"
+        android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>

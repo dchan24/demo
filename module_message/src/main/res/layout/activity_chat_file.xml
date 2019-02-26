@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whites"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/tool_bar_common_with_divider"
+        android:id="@+id/toolbar"
+        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_file_list"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/no_file_now"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/whites"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.402"
+        tools:visibility="visible">
+        <ImageView
+            android:src="@drawable/nofile"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="210dp"
+            android:layout_height="210dp" />
+        <TextView
+            android:text="@string/no_files_now"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:layout_marginTop="@dimen/d_empty_tip_margin_t"
+            android:textColor="@color/c_empty_tip_text_color"
+            android:textSize="@dimen/d_empty_tip_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:id="@+id/text_no_file_hint" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

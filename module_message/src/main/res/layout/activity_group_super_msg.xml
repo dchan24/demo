@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/super_msg_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/free_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="27dp"
+        android:includeFontPadding="false"
+        android:text="@string/welcome_to_use_free_msg"
+        android:textColor="@color/color_FF2A2A2A"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/image_bg"
+        android:layout_width="321dp"
+        android:layout_height="321dp"
+        android:layout_below="@+id/free_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/cc_chat_sms_bg" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/free_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="75dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/group_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/use_free_msg"
+            android:layout_marginLeft="19dp"
+            android:textColor="@color/color_FFFFFFFF"
+            android:textSize="26sp" />
+        <!--<TextView-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="37dp"-->
+        <!--android:text="免费短信"-->
+        <!--android:textColor="@color/color_FFFFFFFF"-->
+        <!--android:textSize="26sp"-->
+        <!--/>-->
+        <!--<TextView
+            android:id="@+id/tv_show"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginTop="22dp"
+            android:text="@string/free_msg_show_position"
+            android:textColor="@color/color_FFFFFFFF"
+            android:textSize="16sp" />-->
+
+        <ImageView
+            android:layout_width="201dp"
+            android:layout_height="178dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/cc_chat_sms_pic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_tip2"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:text="@string/you_can"
+                android:textColor="#FF000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_tip3"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:text="@string/send_free_msg"
+                android:textColor="#0D6CF9"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/send_others_msg_no_free"
+            android:textColor="#FF000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_tip_more"
+            android:layout_width="320dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="9dp"
+            android:text="@string/send_others_msg_no_free2"
+            android:textColor="#FF000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_tip_newone"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/send_others_msg_no_free"
+            android:textColor="#FF000000"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancle_btn"
+            android:layout_width="150dp"
+            android:layout_height="51dp"
+            android:background="@drawable/btn_sms_sure_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/talk_later_btn"
+            android:textColor="#FF157CF8"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sure_btn"
+            android:layout_width="150dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_sms_cancle_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <!--<TextView-->
+    <!--android:id="@+id/tv_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="31dp"-->
+    <!--android:layout_below="@id/image_bg"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:text="启用和飞信收发\n免费短信"-->
+    <!--android:textColor="#404040"-->
+    <!--android:textSize="22sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_notices"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/tv_title"-->
+    <!--android:layout_marginTop="27dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="你的短信将在密友圈消息列表单独显示；\n给移动用户发送短信免费，非移动用户\n将按标准收费"-->
+    <!--android:textColor="#9e9e9e"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/sure_btn"-->
+    <!--android:layout_width="64dp"-->
+    <!--android:layout_height="27dp"-->
+    <!--android:layout_below="@id/tv_notices"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="34dp"-->
+    <!--android:background="@drawable/btn_sms_sure_selector"-->
+    <!--android:text="确定"-->
+    <!--android:textColor="@color/whites"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/cancle_btn"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:clickable="true"-->
+    <!--android:layout_below="@id/sure_btn"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:text="以后再说"-->
+    <!--android:textColor="@color/sms_set_cancle_selector"-->
+    <!--android:textSize="@dimen/text_size_12" />-->
+
+</RelativeLayout>

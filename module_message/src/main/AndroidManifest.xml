@@ -1,0 +1,245 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cmicc.module_message">
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <activity android:name="com.cmicc.module_message.ui.activity.GDLocationActvity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.cmicc.module_message.ui.activity.GDSearchPoiActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.MessageDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="andFetion.intent.action.MESSAGEDETAIL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SENDTO"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="sms"/>
+                <data android:scheme="smsto"/>
+                <data android:scheme="mms"/>
+                <data android:scheme="mmsto"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupSMSActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupSMSEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupSMSSendeeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.NoRcsGroupMemberActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.NonEntryGroupAtivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.ChatFileActivity"
+            android:process=":picture"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.FileDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GlobalSearchMessageActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupMemberListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.MessageSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.OneToOneSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupNameActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GalleryActivity"
+            android:process=":picture"
+            android:screenOrientation="portrait"
+            android:theme="@style/PictureProcessTheme" />
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GalleryChangedActivity"
+            android:process=":picture"
+            android:theme="@style/TransparentActivityTheme" />
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.ChooseFileSendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.ChooseLocalFileActivity"
+            android:theme="@style/FileUITheme"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.MessageBgSetActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.VideoRecordActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.activity.GroupMassMsgListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".ui.activity.GroupMassWelcomeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.MailOASummaryActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.MmsDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.search.GlobalSearchPlatformActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.search.GlobalSearchFunctionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.search.GlobalSearchGroupActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.PreviewImageActivity"
+            android:process=":picture"
+            android:theme="@style/TransparentActivityTheme"/>
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.EditGroupPageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.SuperMsgActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupStrangerActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.SysMsgActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.NotifySmsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.MailMsgListActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.MailSummaryActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.MailOAMsgListActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupQRActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme.SlideAnimation"/>
+
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.MessagevideoActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.ExchangeVcardActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.LabelGroupMemberListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cmicc.module_message.ui.activity.GroupChatListMergaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupChatInvitationActivtiy"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.cmicc.module_message.ui.activity.GroupChatSearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+
+        <receiver android:name="com.cmicc.module_message.ui.broadcast.CallShowReceiver">
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.cmicc.module_message.ui.broadcast.MsgNotificationReceiver">
+            <intent-filter>
+                <action android:name="com.chinasofti.rcs.notificationForMessageRecv"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

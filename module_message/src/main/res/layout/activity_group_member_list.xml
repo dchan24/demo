@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@null"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include android:id="@+id/tb_group_member"
+        layout="@layout/select_picture_custom_all_toolbar"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/group_member_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:layout_below="@+id/tb_group_member" />
+
+
+    <RelativeLayout
+        android:id="@+id/popbar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <com.cmcc.cmrcs.android.ui.view.contactlist.IndexBarView
+            android:id="@+id/values"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="100dp"
+            android:gravity="center_vertical"
+            android:longClickable="true"
+            android:paddingRight="5dp" />
+
+
+        <com.cmcc.cmrcs.android.ui.view.contactlist.ExpIndexView
+            android:id="@+id/contact_exp_index_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="19dip"
+            android:layout_toLeftOf="@id/contact_index_bar_view"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:background="@null"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent">-->
+
+
+<!--<include android:id="@+id/tb_group_member" layout="@layout/tool_bar_common_white_layout"/>-->
+
+
+<!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/group_member_list"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:cacheColorHint="#00000000"-->
+    <!--android:divider="@null"-->
+    <!--android:dividerHeight="0dp"-->
+    <!--android:listSelector="#00000000"-->
+    <!--android:scrollbars="none"-->
+    <!--android:layout_below="@+id/tb_group_member" />-->
+
+
+<!--<RelativeLayout-->
+    <!--android:id="@+id/popbar_container"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:background="@null"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<com.cmcc.cmrcs.android.ui.view.contactlist.IndexBarView-->
+        <!--android:id="@+id/contact_index_bar_view"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:longClickable="true"-->
+        <!--android:paddingRight="5dp" />-->
+
+
+    <!--<com.cmcc.cmrcs.android.ui.view.contactlist.ExpIndexView-->
+        <!--android:id="@+id/contact_exp_index_view"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="19dip"-->
+        <!--android:layout_toLeftOf="@id/contact_index_bar_view"-->
+        <!--android:visibility="gone" />-->
+<!--</RelativeLayout>-->
+
+<!--</RelativeLayout>-->

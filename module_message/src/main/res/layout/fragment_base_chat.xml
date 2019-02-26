@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_editor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <!-- 关键处，用 ScrollView 包裹 ImageView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_bkg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+    </ScrollView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_message_chat"
+        android:padding="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_and_menu"
+        android:background="#F0F0F0"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="#00000000"
+        android:overScrollMode="never"
+        android:layout_marginBottom="0dp"
+        android:scrollbars="none" />
+
+    <!--最新消息提示-->
+    <RelativeLayout
+        android:id="@+id/rl_message_count_tip1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="115dp"
+        android:background="@drawable/bt_msg_at_tip_selector"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/message_count_tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/color_157cf8"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_at_tip"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="115dp"
+        android:background="@drawable/bt_msg_at_tip_selector"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_at"
+            android:layout_width="wrap_content"
+            android:layout_height="32.67dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="@string/tv_label_at_me"
+            android:textColor="@color/color_157cf8"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/input_and_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_more"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/input_divider_top"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/color_e7e7e7"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_gif_layout"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_cancel_gif"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:padding="5dp"
+                android:src="@drawable/cc_chat_gif_close" />
+
+
+            <view
+                android:id="@+id/bqss_hscrollview"
+                class="com.cmicc.module_message.ui.fragment.BaseChatFragment$BqssHorizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_text_input"
+                android:scrollbarSize="3dp"
+                android:scrollbarThumbHorizontal="@color/color_157CF8"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/stickers_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </view>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/shape_more_item_bg"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/shape_more_item_bg" />
+
+                    <ImageView
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/shape_more_item_bg" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/shape_more_item_bg" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_for_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F0F0F0">
+
+                        <LinearLayout
+                            android:id="@+id/fl_ani_panel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/ani_box_shadow_bkg"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            >
+
+                            <com.cmcc.cmrcs.android.widget.emoji.EmojiEditText
+                                android:id="@+id/ani_message"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:includeFontPadding="false"
+                                android:maxHeight="128dp"
+                                android:maxLength="5000"
+                                android:maxWidth="218dp"
+                                android:paddingBottom="8dp"
+                                android:paddingRight="50dp"
+                                android:paddingTop="8dp"
+                                android:textColor="@color/whites"
+                                android:textColorHint="@color/color_text_hint"
+                                android:textCursorDrawable="@drawable/contact_editcursor"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!--富媒体消息栏-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F0F0F0">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/chat_rich_media_vp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="4dp"
+                            android:background="@drawable/shape_moreitem"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_marginBottom="8dp"
+                            android:layout_alignBottom="@+id/chat_rich_media_vp"
+                            android:id="@+id/indexes_ll"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="6dp"
+                            android:visibility="gone">
+
+                            <View
+                                android:background="@drawable/chatrichmediaindxes"
+                                android:layout_marginRight="3dp"
+                                android:id="@+id/indexes_one"
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"/>
+
+                            <View
+                                android:background="@drawable/chatrichmediaindxes_nochoice"
+                                android:layout_marginLeft="3dp"
+                                android:id="@+id/indexes_two"
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_rich_panel"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ib_pic"
+                            style="@style/view_click_bg"
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/pic_selector" />
+
+                        <ImageView
+                            android:id="@+id/ib_take_photo"
+                            style="@style/view_click_bg"
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/take_photo_selector" />
+
+                        <ImageView
+                            android:id="@+id/ib_profile"
+                            style="@style/view_click_bg"
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/profile_selector" />
+
+
+                        <ImageView
+                            android:id="@+id/ib_gif"
+                            style="@style/view_click_bg"
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/selector_gif"
+                            android:visibility="visible" />
+
+
+                        <ImageView
+                            android:id="@+id/ib_file"
+                            style="@style/view_click_bg"
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/file_selector"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:id="@+id/ib_more"
+                                style="@style/view_click_bg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/cc_chat_ic_input_more"
+                                android:visibility="visible" />
+
+                            <View
+                                android:id="@+id/id_more_red_dot"
+                                android:layout_marginTop="11dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="24dp"
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:visibility="gone"
+                                android:layout_gravity="right|bottom"
+                                android:background="@drawable/hint_red_dot" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/base_input_layout"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 自定义菜单图标 公众好友 -->
+                        <ImageView
+                            android:id="@+id/conversation_bottom_showCustomMenuView"
+                            android:layout_width="46dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/whites"
+                            android:clickable="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_keyboard_up"
+                            android:visibility="gone"
+                            />
+
+                        <View
+                            android:id="@+id/input_divider_inside"
+                            android:layout_width="0.33dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_e7e7e7"
+                            />
+
+                        <ViewStub
+                            android:id="@+id/publicpaltform_tools_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout="@layout/publicplat_bottom_layout" />
+
+                        <FrameLayout
+                            android:id="@+id/input_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/fl_edit_panel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:minHeight="48dp"
+                                android:orientation="horizontal">
+
+                                <com.cmcc.cmrcs.android.widget.emoji.EmojiEditText
+                                    android:id="@+id/et_message"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/say_something"
+                                    android:includeFontPadding="false"
+                                    android:lineSpacingExtra="3dp"
+                                    android:lineSpacingMultiplier="1.0"
+                                    android:maxLength="5000"
+                                    android:paddingBottom="9dp"
+                                    android:paddingTop="9dp"
+                                    android:textColor="@color/color_text_black"
+                                    android:textColorHint="@color/color_d5d5d5"
+                                    android:textCursorDrawable="@drawable/contact_editcursor"
+                                    android:textSize="16sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="28dp"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="12dp"
+                                    android:gravity="center_vertical">
+
+
+                                    <ImageButton
+                                        android:id="@+id/ib_expression"
+                                        android:layout_width="22dp"
+                                        android:layout_height="22dp"
+                                        android:background="@color/transparent"
+                                        android:src="@drawable/expression_selector"
+                                        android:visibility="visible" />
+
+                                    <ImageButton
+                                        android:id="@+id/ib_expression_keyboard"
+                                        android:layout_width="22dp"
+                                        android:layout_height="22dp"
+                                        android:background="@color/transparent"
+                                        android:src="@drawable/expression_keyboard_selector"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+
+                                <!--发送按钮-->
+                                <ImageButton
+                                    android:id="@+id/ib_send"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@color/transparent"
+                                    android:src="@drawable/send_selector"
+                                    android:visibility="gone" />
+
+                                <!--语音转文字-->
+                                <!--
+                                <ImageButton
+                                    android:id="@+id/ib_audio_to_text"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginBottom="10.5dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@color/transparent"
+                                    android:src="@drawable/cc_chat_voice_normal"
+                                    android:visibility="visible" /> -->
+
+                                <!--语音-->
+                                <ImageButton
+                                    android:id="@+id/ib_audio"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@color/transparent"
+                                    android:src="@drawable/audio_selector"
+                                    android:visibility="visible" />
+
+
+                            </LinearLayout>
+
+
+                            <View
+                                android:id="@+id/ib_record_red_dot"
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_marginBottom="30dp"
+                                android:visibility="gone"
+                                android:layout_gravity="right|bottom"
+                                android:background="@drawable/hint_red_dot" />
+                            <!--图片、拍照、聊天等按钮-->
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_for_sms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_ffffff"
+                    android:elevation="0dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="#BAC8E0"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/sms_direction"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/btn_sms_instruction_selector"
+                            android:gravity="center"
+                            android:layout_marginRight="5dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_isFree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/you_are_use_free_msg"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="，"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_exitsms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/exit_msg"
+                            android:textColor="#596CB3"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_sms_pannel"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:minHeight="48dp">
+
+                        <com.cmcc.cmrcs.android.widget.emoji.EmojiEditText
+                            android:id="@+id/et_sms"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center_vertical"
+                            android:hint="@string/send_msg"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="3dp"
+                            android:lineSpacingMultiplier="1.0"
+                            android:maxHeight="100dp"
+                            android:maxLength="5000"
+                            android:paddingBottom="9dp"
+                            android:paddingTop="9dp"
+                            android:textColor="@color/color_text_black"
+                            android:textColorHint="@color/color_d5d5d5"
+                            android:textCursorDrawable="@drawable/contact_editcursor"
+                            android:textSize="16sp" />
+
+                        <!--发送按钮-->
+                        <ImageButton
+                            android:id="@+id/ib_sms_send"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="12dp"
+                            android:background="@color/transparent"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/chat_send_grey"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/multi_opera_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@color/whites"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/multi_btn_delete"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:text="@string/delete"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/btn_chat_delete_selector"
+                        android:paddingTop="@dimen/dp5"/>
+
+                    <TextView
+                        android:id="@+id/multi_btn_forward"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:text="@string/forwarld"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/btn_chat_forward_selector"
+                        android:paddingTop="@dimen/dp5"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--最新消息提示-->
+    <RelativeLayout
+        android:id="@+id/rl_message_count_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_above="@id/input_and_menu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bt_msg_new_tip_selector"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/message_count_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/chat_remind_down"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/color_404040"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!--添加表情fragment的layout-->
+    <LinearLayout
+        android:id="@id/ll_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <FrameLayout
+            android:id="@+id/fl_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_f5f5f5"
+            android:visibility="gone">
+
+        </FrameLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/no_message_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_history_msg"
+        android:visibility="gone"
+        android:textSize="16sp" />
+
+</RelativeLayout>

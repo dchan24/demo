@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#000000">
+
+        <com.cmcc.cmrcs.android.ui.view.HackyViewPager
+            android:id="@+id/vp_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.cmcc.cmrcs.android.widget.SmoothImageView
+            android:id="@+id/iv_smooth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play_video_selector"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+    <!--顶部操作栏-->
+    <RelativeLayout
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_gravity="top"
+        android:background="#d91f1f1f">
+
+        <ImageView
+            android:id="@+id/quit"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="12dp"
+            android:src="@drawable/cc_chat_back_white_normal"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/quit"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            tools:text="@string/pre_view"/>
+        <TextView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="24dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="@string/edit"/>
+
+    </RelativeLayout>
+    <!-- 底部操作栏-->
+    <RelativeLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="#d91f1f1f">
+
+        <LinearLayout
+            android:id="@+id/ll_select"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/iv_select"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/chat_original_gray_unselected" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/iv_select"
+                android:text="@string/select"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_original_photo"
+            style="@style/CustomCheckBoxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="6dp"
+            android:text="@string/original_pic"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="88dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/blue_btn"
+            android:text="@string/send_"
+            android:textColor="#404040"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</FrameLayout>

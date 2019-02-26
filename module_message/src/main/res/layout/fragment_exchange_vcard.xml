@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/color_ffffff"
+    android:layout_height="match_parent">
+
+    <!--layout="@layout/exchange_vcard"-->
+    <include
+        android:id="@+id/my_profile_card_layout"
+        layout="@layout/include_stranger_profile_card"/>
+
+    <Button
+        android:id="@+id/agree"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/color_ffffff"
+        android:text="@string/exchange_vcard_agree"
+        android:textSize="@dimen/text_size_16"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:background="@drawable/selector_exchange_card" />
+
+    <Button
+        android:id="@+id/check_vcard"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/color_ffffff"
+        android:text="@string/check_vcard"
+        android:textSize="@dimen/text_size_16"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:background="@drawable/selector_exchange_card"
+        android:visibility="gone" />
+</RelativeLayout>

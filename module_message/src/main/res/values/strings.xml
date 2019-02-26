@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+
+    >
+    <string name="app_name">module_message</string>
+    <string name="location_activity_title">位置</string>
+    <string name="send_location">发送</string>
+    <string name="location_loading">加载中</string>
+    <string name="location_network_invalid_tip">请检查网络后重试</string>
+    <string name="location_round_tips">可选附近500米范围内的地点</string>
+    <string name="gd_nativ_name">高德地图</string>
+    <string name="baidu_nativ_name">百度地图</string>
+    <string name="tencent_nativ_name">腾讯地图</string>
+    <string name="cancel_nativ">取消</string>
+    <string name="phone_no_nativ_software">未发现手机导航应用，无法操作，请先下载地图APP</string>
+    <string name="phone_nativ_version_low">暂无法支持导航,请升级您的地图APP</string>
+    <string name="touch_start_say">轻触开始说话</string>
+    <string name="record_setting">设置</string>
+    <string name="send_record">发送</string>
+    <string name="recording">语音录制中</string>
+    <string name="smart_recording">智能识别中</string>
+    <string name="record_network_is_error">网络不可用，请检查网络设置</string>倒计时
+    <string name="record_count_down">倒计时 </string>
+    <string name="record_second">秒</string>
+
+    <!--201811未翻译字段-->
+    <string name="search_loction_not_result">无搜索结果</string>
+    <string name="audio_not_net_content">当前网络不可用,无法实现语音识别功能,请检查网络设置</string>
+    <string name="audio_not_net_i_know">我知道了</string>
+    <string name="audio_select_type">请选择您偏好的语音发送模式:</string>
+    <string name="audio_select_audio_and_text">同时发送语音+文字(语音识别)</string>
+    <string name="audio_select_text">仅发送文字(语音识别)</string>
+    <string name="audio_select_audio">仅发送语音</string>
+    <string name="audio_select_cancel">取消</string>
+    <string name="audio_select_sure">确定</string>
+    <string name="message_audio_recoder_tip">说句话试试</string>
+    <string name="message_audio_recoder_exit">退出</string>
+    <string name="message_audio_finish">说完了</string>
+</resources>

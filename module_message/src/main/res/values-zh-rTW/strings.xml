@@ -1,0 +1,23 @@
+<resources>
+    <string name="location_activity_title">位置</string>
+    <string name="send_location">發送</string>
+    <string name="location_loading">載入中</string>
+    <string name="location_network_invalid_tip">請檢查網路後重試</string>
+    <string name="location_round_tips">可選附近500米範圍內的地點</string>
+    <string name="gd_nativ_name">高德地圖</string>
+    <string name="baidu_nativ_name">百度地圖</string>
+    <string name="tencent_nativ_name">騰訊地圖</string>
+    <string name="cancel_nativ">取消</string>
+    <string name="phone_no_nativ_software">未發現手機導航應用，無法操作，請先下載地圖APP</string>
+    <string name="phone_nativ_version_low">暫無法支援導航,請升級您的地圖APP</string>
+    <string name="touch_start_say">輕觸開始說話</string>
+    <string name="record_setting">設置</string>
+    <string name="send_record">發送</string>
+    <string name="recording">語音錄製中</string>
+    <string name="smart_recording">智慧識別中</string>
+    <string name="record_network_is_error">網路不可用，請檢查網路設置</string>倒計時
+    <string name="record_count_down">倒計時 </string>
+    <string name="record_second">秒</string>
+
+
+</resources>

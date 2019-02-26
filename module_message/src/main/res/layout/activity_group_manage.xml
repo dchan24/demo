@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whites">
+
+    <include layout="@layout/tool_bar_common_with_divider" />
+
+    <RelativeLayout
+        android:id="@+id/group_transfer"
+        style="@style/chat_setting_list_item_style">
+
+        <TextView
+            android:id="@+id/group_transfer_tv"
+            style="@style/group_or_one_setting_textview_style"
+            android:text="@string/group_transfer" />
+
+        <ImageView
+            style="@style/setting_item_right_arrow_style2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/all_listview_divider_height"
+            android:background="@color/color_f1f1f1"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_disband"
+        style="@style/chat_setting_list_item_style">
+
+        <TextView
+            android:id="@+id/group_disband_tv"
+            style="@style/group_or_one_setting_textview_style"
+            android:text="@string/group_disband" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/all_listview_divider_height"
+            android:background="@color/color_f1f1f1"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

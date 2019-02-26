@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="16dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="54dp"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/sms_sendee"
+            android:minHeight="25dp"
+            android:maxHeight="48dp"
+            android:textSize="@dimen/text_size_18"
+            android:textColor="@color/color_2a2a2a"
+            android:text="@string/groups_sms_edit_sendee"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lineSpacingExtra="4dp"
+            android:includeFontPadding="false"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/select_sendee"
+        android:layout_marginTop="16.7dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/group_sms_select_img"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layout_for_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:elevation="0dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/color_bac8e0"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/sms_direction"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/btn_sms_instruction_selector"
+                android:gravity="center"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:background="@color/color_bac8e0"
+                android:id="@+id/tv_isFree"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/you_are_use_group_msg"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sms_pannel"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp">
+
+            <EditText
+                android:id="@+id/et_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="@string/send_msg"
+                android:includeFontPadding="false"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp"
+                android:textColor="@color/color_text_black"
+                android:textColorHint="@color/color_d5d5d5"
+                android:textCursorDrawable="@drawable/contact_editcursor"
+                android:textSize="16sp" />
+
+            <!--发送按钮-->
+            <ImageView
+                android:id="@+id/tv_send"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="12dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/chat_send_grey"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

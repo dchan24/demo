@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fffffe"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/id_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/whites"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarStyle"
+        app:titleTextColor="@color/color_2a2a2a"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp"
+        app:contentInsetLeft="0dp"
+        style="@style/NoSpaceActionBarTheme"
+        >
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/common_back_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/change_name"
+            android:textColor="@color/color_2a2a2a"
+            android:textSize="18sp"
+            android:text="@string/modify_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"/>
+
+
+        <TextView
+            android:id="@+id/group_name_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="18dp"
+            android:text="@string/public_report_finish"
+            android:textColor="@color/color_4991fb"
+            android:textSize="@dimen/sp16"/>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:background="@color/divider" />
+
+    <TextView
+        android:visibility="invisible"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/tv_expanded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_for_group_you_create"
+        android:layout_marginTop="23dp"
+        android:textSize="@dimen/sp12" />
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/edit_query"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:textCursorDrawable="@drawable/contact_editcursor"
+            android:textSize="@dimen/sp24"
+            android:textColor="@color/color_2a2a2a"
+            android:textColorHint="@color/color_d5d5d5"
+            android:hint="@string/modify_group_hint_name" />
+
+        <ImageButton
+            android:id="@+id/iv_delect"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:src="@drawable/contact_search_delect_btn_selector"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1.33dp"
+        android:background="@color/color_f3f3f3" />
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <View android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id = "@+id/pop_10g_window_drop_view"
+        android:background="#00000000"
+        />
+    <include
+        layout="@layout/select_picture_custom_toolbar"
+        ></include>
+
+
+
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="10dp"-->
+        <!--android:background="#FFFFFF"/>-->
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f1ffffff"
+        android:visibility="gone">
+        <View android:layout_width="match_parent"
+            android:layout_height="@dimen/all_listview_divider_height"
+            android:background="#1a000000"/>
+        <TextView
+            android:id="@+id/textview_select_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:text="@string/selected"
+            android:textColor="#a1a1a1"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/button_send"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="88dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="@string/send_btn_text"
+            android:background="@drawable/btn_send_file"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+</LinearLayout>

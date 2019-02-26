@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_graybackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/id_toolbar"
+        layout="@layout/select_picture_custom_all_toolbar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:background="@color/divider" />
+
+    <RelativeLayout
+        android:id="@+id/group_message_empty"
+        android:layout_below="@id/id_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128.66dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/image_view_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_empty_chat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_view_empty"
+            android:layout_marginTop="18.67dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_msg_record"
+            android:textSize="@dimen/text_size_11"
+            android:textColor="@color/color_868686"/>
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/group_sms_send_butback" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/id_toolbar"
+        android:visibility="visible"
+        android:id="@+id/list"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/group_sms_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="107dp"
+            android:background="@color/color_f5f5f5"/>
+
+        <ImageView
+            android:id="@+id/iv_normal_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/group_sms_send_butback" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

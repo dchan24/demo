@@ -1,0 +1,257 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/message_audito_text_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="223dp"
+    android:background="@color/whites">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id = "@+id/message_audio_record_root_view"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentTop="true"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/audio_progress_drawable"
+            android:max="60"
+            android:progress="0"
+            android:id = "@+id/recoder_progress_bar"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/recoder_progress_bar"
+            android:text="@string/message_audio_recoder_tip"
+            android:includeFontPadding="false"
+            android:textSize="16sp"
+            android:id = "@+id/recoder_tip"
+            android:textColor="#FF157CF8"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="43dp"
+            />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/recoder_progress_bar"
+            android:includeFontPadding="false"
+            android:textSize="14sp"
+            android:id = "@+id/recoder_time_up_tip"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="#FFFC2449"
+            android:visibility="visible"
+            />
+
+        <!--录音按键-->
+        <ImageView
+            android:id="@+id/record_audio_btn"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_horizontal"
+            android:src="@drawable/audio"
+            android:layout_marginTop="77dp"
+            android:visibility="gone"
+            />
+
+
+        <!-- 录音动画-->
+        <com.cmicc.module_message.ui.view.RecordAnimView
+            android:id="@+id/record_audio_wave_anim"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/recoder_tip"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="visible"
+            />
+        <!--
+<com.cmicc.module_message.ui.view.VoiceAnimator
+    android:id="@+id/record_audio_wave_anim"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/recoder_time_up_tip"
+    android:layout_height="116dp"
+    android:layout_marginTop="10dp"
+    app:dotsCount="4"
+    app:dotsMaxHeight="@array/dotsMaxHeight"
+    app:dotColors="@array/dotsColors"
+    android:background="@drawable/circle_bg"
+    app:animationMode="animation"
+    app:dotsMargin="6dp"
+    app:dotsMinHeight="8dp"
+    app:dotsWidth="6dp"
+    /> -->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:gravity="center_horizontal"
+    android:layout_alignParentBottom="true"
+    >
+
+    <TextView
+        android:id = "@+id/recodr_audio_exit"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="@string/message_audio_recoder_exit"
+        android:textColor="#FF0D6CF9"
+        android:textSize="16sp"
+        android:background="@drawable/record_operation_btn_bg"
+        />
+
+    <TextView
+        android:id = "@+id/recodr_audio_finish"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:text="@string/message_audio_finish"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="#FF0D6CF9"
+        android:textSize="16sp"
+        android:background="@drawable/record_operation_btn_bg"
+        />
+</LinearLayout>
+</RelativeLayout>
+
+    <!--
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:id = "@+id/select_send_audio_type_root_view"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:text = "请选择您偏好的语音发送模式:"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#FFFFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:includeFontPadding="false"
+            android:text="同时发送语音+文字(语音识别)"
+            android:layout_weight="1"
+            android:textColor="#FF2A2A2A"
+            android:id = "@+id/select_send_audio_and_text"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/select_send_audio_and_text_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:includeFontPadding="false"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/send_audio_type_select_btn_bg" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#FFFFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="仅发送文字(语音识别)"
+            android:layout_weight="1"
+            android:id = "@+id/select_send_text"
+            android:textColor="#FF2A2A2A"
+            android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/select_send_text_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/send_audio_type_select_btn_bg" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="#FFFFFFFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="仅发送文语音"
+                    android:id = "@+id/select_send_voice"
+                    android:textColor="#FF2A2A2A"
+                    android:layout_weight="1"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/select_send_voice_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/send_audio_type_select_btn_bg" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="#FFFFFFFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:text="取消"
+                    android:gravity="center"
+                    android:id = "@+id/select_send_audio_type_cancel"
+                    android:textColor="#FF2A2A2A"
+                    android:layout_weight="1"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id = "@+id/select_send_audio_type_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:text = "确定"
+                    android:focusable="true"
+                     />
+
+            </LinearLayout>
+
+        </LinearLayout> -->
+
+</RelativeLayout>

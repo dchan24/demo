@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/color_ffffff"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/group_info_text"
+        layout="@layout/include_group_chat_invitation_groupinfo"/>
+
+
+    <TextView
+        android:id="@+id/invitation_stip_text"
+        android:layout_below="@+id/group_info_text"
+        android:layout_marginTop="36dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/color_6f6f6f"
+        android:textSize="@dimen/text_size_16"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:includeFontPadding="false"/>
+
+    <Button
+        android:id="@+id/agree"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/color_ffffff"
+        android:text="@string/agree_to_join_group_chat"
+        android:textSize="@dimen/text_size_16"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:background="@drawable/selector_exchange_card" />
+
+</RelativeLayout>

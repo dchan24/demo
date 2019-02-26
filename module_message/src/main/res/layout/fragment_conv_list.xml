@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_for_convlist"
+        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/layout_loading"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="36dp"-->
+    <!--android:background="@color/color_afbdd4"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_below="@+id/toolbar"-->
+    <!--&gt;-->
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/progress_send_small"-->
+    <!--style="@android:style/Widget.ProgressBar.Small"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--android:indeterminateDrawable="@drawable/msg_loading_progress"-->
+    <!--android:indeterminateDuration="2000"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/loading_offline_msgs"-->
+    <!--android:textColor="#ffffff"-->
+    <!--android:textSize="12sp"/>-->
+    <!--</LinearLayout>-->
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/layout_loading_for_login"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="36dp"-->
+        <!--android:layout_below="@id/toolbar"-->
+        <!--android:background="#FFC78F"-->
+        <!--android:visibility="gone">-->
+        <!--android:background="@color/color_afbdd4"-->
+        <!--<TextView-->
+            <!--android:id="@+id/login_status_msg"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:paddingLeft="4dp"-->
+            <!--android:text="@string/login_loging"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="12sp"/>-->
+        <!--<ProgressBar-->
+        <!--android:id="@+id/progress_small"-->
+        <!--style="@android:style/Widget.ProgressBar.Small"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@id/login_status_msg"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:indeterminateDrawable="@drawable/msg_loading_progress"-->
+        <!--android:indeterminateDuration="2000"/>-->
+
+    <!--</RelativeLayout>-->
+
+
+    <ImageView
+        android:id="@+id/im_empty"
+        android:layout_width="177dp"
+        android:layout_height="156dp"
+        android:background="@drawable/blankpage_nomessage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"
+        tools:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:lineSpacingExtra="16.67dp"
+        android:text="@string/home_none_message"
+        android:textColor="@color/home_none_content_empty"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/im_empty"
+        app:layout_constraintLeft_toLeftOf="@+id/im_empty"
+        app:layout_constraintRight_toRightOf="@+id/im_empty"
+        tools:visibility="gone"/>
+
+    <com.cmicc.module_message.ui.view.MyRecyclerView
+        android:id="@+id/rv_conv_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <LinearLayout
+        android:id="@+id/empty_hint"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.467"
+        tools:visibility="visible">
+        <ImageView
+            android:src="@drawable/message"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="210dp"
+            android:layout_height="210dp" />
+        <TextView
+            android:text="@string/pic_news_one_touch"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:includeFontPadding="false"
+            android:textColor="#6F6F6F"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

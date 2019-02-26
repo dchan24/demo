@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:elevation="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal"
+            android:background="#ffffff">
+            <FrameLayout
+                android:id="@+id/back"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/title_bar_home_light"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#2a2a2a"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="28dp"
+                android:paddingRight="20dp"/>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_file_icon"
+            android:layout_width="60dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="42dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/message_files_icon_content_unknown"/>
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="33dp"
+            android:ellipsize="middle"
+            android:gravity="top"
+            android:text="韩-国-济-州-岛-汉-拿-山-旅-游-计-划22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222.doc"
+            android:textColor="@color/color_2a2a2a"
+            android:textSize="@dimen/text_size_16"
+            android:includeFontPadding="false"
+            android:maxHeight="200dp"
+            />
+
+        <TextView
+            android:id="@+id/file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50KB"
+            android:textColor="@color/color_a1a1a1"
+            android:textSize="14sp"
+            android:layout_marginTop="10.5dp"
+            />
+
+        <Button
+            android:id="@+id/btn_download"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/dp46"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/big_btn_selector"
+            android:text="@string/download"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/big_btn_selector"
+            android:text="@string/open"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="@dimen/dp46"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layout_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/dp46"
+            >
+
+            <ProgressBar
+                android:id="@+id/progress_loading"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/big_btn_selector"
+                android:progressDrawable="@drawable/msg_file_progress_drawable"/>
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:background="@drawable/file_text_selector"
+                android:text="@string/download_continue"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

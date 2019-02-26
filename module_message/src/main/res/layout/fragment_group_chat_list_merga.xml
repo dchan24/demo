@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.cmcc.cmrcs.android.ui.view.contactlist.IndexBarView
+        android:id="@+id/contact_index_bar_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/group_chat_toolbar"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:longClickable="true"
+        android:visibility="invisible"
+        android:paddingRight="5dp" />
+
+    <com.cmcc.cmrcs.android.ui.view.contactlist.ExpIndexView
+        android:id="@+id/contact_exp_index_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        tools:visibility="visible"
+        android:visibility="gone"/>
+
+</RelativeLayout>

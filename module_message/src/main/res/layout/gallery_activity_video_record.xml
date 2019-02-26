@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:splitMotionEvents="false"
+    >
+
+    <ImageView
+        android:id="@+id/picPre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <com.cmcc.cmrcs.android.ui.utils.media.play.MVideoPlayerSurfaceView
+        android:id="@+id/playSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:visibility="gone" />
+
+    <com.cmcc.cmrcs.android.ui.utils.media.record.MVideoRecorderSurfaceView
+        android:id="@+id/recordSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:visibility="gone" />
+    <ProgressBar
+        android:id="@+id/pb_timer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="gone"
+        android:max="60"
+        android:progressDrawable="@drawable/video_progress_color"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+
+
+        <RelativeLayout
+            android:id="@+id/record_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/red_dot_video"
+                android:visibility="gone"
+                android:layout_marginLeft="146dp"
+                android:layout_marginBottom="142dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/hint_red_dot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"/>
+
+            <TextView
+                android:id="@+id/action_bar_duration_recording_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/red_dot_video"
+                android:layout_marginLeft="12dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="137dp"
+                android:text="@string/take_photo_video"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <!--<Button-->
+            <!--android:id="@+id/action_bar_back"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_marginLeft="46dp"-->
+            <!--android:layout_marginBottom="62dp"-->
+            <!--android:background="@drawable/chat_camera_back" />-->
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="46dp"
+                android:layout_marginBottom="62dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+                <ImageView
+                    android:id="@+id/action_bar_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/chat_camera_back" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/record"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="45dp"
+                android:background="@drawable/selector_take_photo_button" />
+
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="62dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+                <ImageView
+                    android:id="@+id/action_bar_change_camera_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_switch_n" />
+            </RelativeLayout>
+
+            <!--<Button-->
+            <!--android:id="@+id/action_bar_change_camera_bt"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="45dp"-->
+            <!--android:layout_marginBottom="62dp"-->
+            <!--android:background="@drawable/ic_switch_n" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/play_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/img"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/rerecord"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="36dp"
+                android:layout_marginBottom="51dp"
+                android:src="@drawable/chat_camera_undo"/>
+
+            <FrameLayout
+                android:id="@+id/btn_middle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/send"
+                android:layout_centerHorizontal="true">
+
+                <Button
+                    android:id="@+id/play"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/chat_camera_takepicture"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/img_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_image_edit"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+            <ImageView
+                android:id="@+id/send"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="34dp"
+                android:layout_marginBottom="51dp"
+                android:src="@drawable/ic_send_n" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

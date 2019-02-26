@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="54dp">
+        <LinearLayout
+            android:id="@+id/left_back"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            android:gravity="center_vertical|left">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_back_selector"
+                android:id = "@+id/location_back_btn" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location_activity_title"
+            android:textSize="18sp"
+            android:includeFontPadding="false"
+            android:layout_toRightOf="@+id/left_back"
+            android:textColor="#2A2A2A"
+            android:id = "@+id/location_title"
+            android:layout_centerVertical="true" />
+<!--
+        <LinearLayout
+            android:id="@+id/select_rl"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/location_ok_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:textColor="@color/location_send_btn_text_color"
+                android:textSize="16sp"
+                android:text = "@string/send_location"
+                android:layout_marginLeft="12dp" />
+
+        </LinearLayout> -->
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp">
+            <com.cmicc.module_message.ui.view.GDMapView
+                android:id="@+id/gd_map_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_map_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/cc_chat_location_pin_pressed"
+                android:visibility="gone" />
+<!--
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text = "@string/location_loading"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@anim/common_rotate_loading_anim" /> -->
+
+        </FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom|left"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_height="80dp">
+        <TextView
+            android:id="@+id/tv_map_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="14dp"
+            android:includeFontPadding="false"
+            android:gravity="center_vertical"
+            android:text = "@string/location_loading"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="17sp"
+            android:layout_toLeftOf="@+id/location_nativ_btn"
+            android:textColor="@color/c_2A2A2A"
+             />
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:id = "@+id/location_nativ_btn"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:src ="@drawable/location_nativ_btn_bg"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/location_loading_progress_bg"
+            android:layout_marginTop="153dp"
+            android:layout_marginLeft="120dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id = "@+id/progress_layout"
+            >
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal"
+                android:indeterminateDrawable="@anim/location_map_loading" />
+
+            <TextView
+                android:id="@+id/location_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:layout_marginTop="24dp"
+                android:text = "@string/location_loading"
+                android:layout_gravity="center_horizontal"
+                android:maxLines="1"
+                android:textSize="22sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="#FFFFFFFF"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+<!--
+
+            <TextView
+                android:id="@+id/tv_map_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_map_title"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:textColor="@color/color_a1a1a1"
+                />
+    <RelativeLayout
+        android:id="@+id/mMapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/gd_map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_map_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/map_z_icon_position"
+            android:text="Center"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_map_title"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_map_position"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/map_info"
+            android:gravity="center"
+            android:maxLines="4"
+            android:paddingRight="8dp"
+            android:visibility="gone" />
+    </RelativeLayout> -->
+<!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/listview_add_public_platform"
+            style="@style/FetionTheme.Activity_ListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:choiceMode="singleChoice"
+            android:listSelector="@drawable/sdk_menu_item_bg_selector"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@anim/common_rotate_loading_anim" />
+        />
+    </RelativeLayout>-->
+</LinearLayout>
